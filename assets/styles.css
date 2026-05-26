@@ -359,13 +359,13 @@ p { margin: 0; }
   position: absolute;
   left: 8px;
   right: 8px;
-  height: 1.5px;
+  height: 3px;
   background: #000;
   transition: transform .3s var(--ease), top .3s var(--ease), opacity .3s var(--ease);
 }
-.nav__burger span:nth-child(1) { top: 14px; }
+.nav__burger span:nth-child(1) { top: 12px; }
 .nav__burger span:nth-child(2) { top: 19px; }
-.nav__burger span:nth-child(3) { top: 24px; }
+.nav__burger span:nth-child(3) { top: 26px; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -1156,15 +1156,20 @@ p { margin: 0; }
   transition: transform .4s var(--ease);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 28px;
+  text-align: center;
 }
 .mobile-menu.open { transform: translateY(0); }
 .mobile-menu a {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: 40px;
-  letter-spacing: -0.025em;
-  color: var(--ink);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
 }
 .mobile-menu__close {
   position: absolute;
@@ -1224,16 +1229,37 @@ p { margin: 0; }
 @media (max-width: 720px) {
   :root { --gutter: 18px; }
 
-  /* Nav: mobile menu */
+  /* Nav: mobile menu — logo LEFT, burger CENTER, EN/PL RIGHT */
   .nav__links { display: none; }
   .nav__group { display: none; }
   .nav__burger { display: block; }
-  .nav__right { gap: 8px; }
+  .nav__inner { justify-content: space-between; }
+  .nav__logo {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 0;
+    order: 1;
+  }
+  .nav__burger {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    order: 2;
+  }
+  .nav__right {
+    margin-left: auto;
+    gap: 8px;
+    order: 3;
+  }
   .lang-switch { font-size: 11px; }
 
   /* Marquee */
   .marquee { padding: 10px 0; }
-  .marquee__item { font-size: 10px; letter-spacing: 0.18em; padding-right: 24px; }
+  .marquee__item { font-size: 10px; letter-spacing: 0.18em; padding-right: 24px; gap: 24px; }
 
   /* Hero */
   h1 { font-size: clamp(40px, 11vw, 60px) !important; line-height: 1; }
@@ -1249,10 +1275,39 @@ p { margin: 0; }
   .flavors { grid-template-columns: 1fr; gap: 20px; }
   .flavor-card { padding: 24px 16px; }
   .flavor-card:hover { transform: none; }
+  /* Mobile: flavor name (SVG title) sits directly under the bottle, no overlap */
+  .flavor-card__bottle {
+    aspect-ratio: auto;
+    width: auto;
+    align-self: center;
+  }
+  .flavor-card__bottle img {
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    max-width: 70%;
+    display: block;
+  }
+  .flavor-card__name { margin-top: 4px; max-height: 56px; }
+  .flavor-card__protein { margin-top: 14px; }
 
-  /* Buttons: slightly smaller on mobile */
-  .btn { width: 112px; height: 112px; font-size: 12px; padding: 10px; gap: 4px; }
+  /* Buttons: slightly smaller on mobile + centered (square buttons only, not text) */
+  .btn { width: 112px; height: 112px; font-size: 12px; padding: 10px; gap: 4px; transition: none; }
   .btn-sm { width: 84px; height: 84px; font-size: 10px; }
+  /* Disable hover effects on mobile (no hover anyway) */
+  .btn__qure { display: none; }
+  .btn:hover .btn__text,
+  .btn:active .btn__text,
+  .btn:focus .btn__text { opacity: 1; transform: none; filter: none; }
+  .btn__text { transition: none; }
+  .hero__text .btn, .split__text .btn, .variety-pack__text .btn,
+  .sec-head .btn, .plan .btn, section .container > .btn,
+  section .container > .btn-icon {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product-cta-row { justify-content: center; }
 
   /* Product page */
   .split__img { padding: 16px; min-height: 280px; }
@@ -1275,7 +1330,15 @@ p { margin: 0; }
   .variety-pack__bottles img { width: 30%; }
 
   /* Brand mark scroll section: smaller on mobile */
-  .brand-mark-section { min-height: 100vh; }
+  .brand-mark-section {
+    min-height: 0;
+    padding: 16px 0;
+    display: block;
+  }
+  .brand-mark-track {
+    position: static;
+    transform: none;
+  }
   .brand-mark { width: clamp(140px, 50vw, 240px); }
 
   /* Footer */
@@ -1317,7 +1380,7 @@ p { margin: 0; }
   .nav__inner { height: 56px; }
 
   /* Marquee tighter */
-  .marquee__item { font-size: 9px; padding-right: 18px; }
+  .marquee__item { font-size: 9px; padding-right: 18px; gap: 18px; }
 
   /* Variety pack bottles */
   .variety-pack__bottles img { width: 32%; }
