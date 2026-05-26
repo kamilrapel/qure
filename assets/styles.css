@@ -1148,33 +1148,47 @@ p { margin: 0; }
 /* ---------- Mobile menu ---------- */
 .mobile-menu {
   position: fixed;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 64px;
+  bottom: auto;
   background: var(--bg);
-  z-index: 100;
-  padding: 80px var(--gutter);
-  transform: translateY(-100%);
+  z-index: 49;
+  padding: 32px var(--gutter);
+  transform: translateY(-110%);
   transition: transform .4s var(--ease);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 28px;
+  justify-content: flex-start;
+  gap: 22px;
   text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .mobile-menu.open { transform: translateY(0); }
+.mobile-menu__logo,
+.mobile-menu__close { display: none; }
+.mobile-menu {
+  gap: 0;
+}
 .mobile-menu a {
   font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 40px;
-  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.101em;
   text-transform: uppercase;
   text-align: center;
   color: #000;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 0;
+  border-bottom: 1px solid #000;
 }
+.mobile-menu a:nth-of-type(2) { border-top: 1px solid #000; }
 .mobile-menu__close {
   position: absolute;
-  top: 24px;
-  right: var(--gutter);
+  top: 14px;
+  left: var(--gutter);
   width: 40px;
   height: 40px;
   background: transparent;
@@ -1294,6 +1308,19 @@ p { margin: 0; }
   /* Mobile: hide bottle image in The QURE promise split section */
   .split__img--promise { display: none; }
 
+  /* Mobile: products page order — logo, photo, squares, then description + macros */
+  section.section-tight .split {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  section.section-tight .split__text { display: contents; }
+  section.section-tight .split .product-id { order: 1; }
+  section.section-tight .split .split__img { order: 2; margin: 0 auto; }
+  section.section-tight .split .product-cta-row { order: 3; justify-content: center; flex-wrap: wrap; }
+  section.section-tight .split p { order: 4; }
+  section.section-tight .split ul { order: 5; }
+
   /* Buttons: slightly smaller on mobile + centered (square buttons only, not text) */
   .btn { width: 112px; height: 112px; font-size: 12px; padding: 10px; gap: 4px; transition: none; }
   .btn-sm { width: 84px; height: 84px; font-size: 10px; }
@@ -1332,10 +1359,11 @@ p { margin: 0; }
   /* Variety pack */
   .variety-pack__bottles img { width: 30%; }
 
-  /* Brand mark scroll section: smaller on mobile */
+  /* Brand mark scroll section: much smaller on mobile */
   .brand-mark-section {
     min-height: 0;
-    padding: 16px 0;
+    padding: 0;
+    margin: -24px 0;
     display: block;
   }
   .brand-mark-track {
@@ -1381,6 +1409,7 @@ p { margin: 0; }
   /* Logo in nav */
   .nav__logo svg { height: 22px; width: auto; }
   .nav__inner { height: 56px; }
+  .mobile-menu { top: 56px; }
 
   /* Marquee tighter */
   .marquee__item { font-size: 9px; padding-right: 18px; gap: 18px; }
