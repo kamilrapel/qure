@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QURE PROTEIN - High Protein Smoothie</title>
+<meta name="description" content="QURE is a high protein smoothie with up to 72g of natural protein per bottle. No whey. No added sugar. Low fat. Lactose free. No preservatives.">
+
+<link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/swi6zwk.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="assets/qure-logo.svg">
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <nav class="nav__group nav__group--left">
+      <ul class="nav__links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="subscription.html">Subscription</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html" class="nav__logo" aria-label="QURE home">
+      <svg viewBox="0 0 200.17 50.81" xmlns="http://www.w3.org/2000/svg">
+        <path d="M47.53,39.74l4.57,4-5.36,6.22-5-4.36c-4.36,3.29-9.79,5.22-15.65,5.22C12.01,50.81,0,39.16,0,25.37,0,11.58,12.01,0,26.09,0c14.22,0,26.09,11.58,26.09,25.37,0,5.29-1.72,10.22-4.65,14.36ZM33.95,38.88l-5.72-5,5.36-6.22,5.93,5.15c1.21-2.22,1.86-4.79,1.86-7.43,0-8.5-7-15.79-15.29-15.79s-15.22,7.29-15.22,15.79,7,15.87,15.22,15.87c2.86,0,5.57-.86,7.86-2.36Z"/>
+        <path d="M59.89,28.73V.86s10.51,0,10.51,0v27.44c0,7.58,4.86,12.94,11.72,12.94,6.79,0,11.65-5.36,11.65-12.94V.86s10.58,0,10.58,0v27.87c0,12.94-9.22,22.08-22.23,22.08-13.08,0-22.23-9.15-22.23-22.08Z"/>
+        <path d="M143.43,49.96l-11.22-15.94h-7.79s0,15.94,0,15.94h-10.51s0-49.1,0-49.1h22.08c10.65,0,18.51,6.86,18.51,16.58,0,7.29-4.43,13.01-11.15,15.37l12.08,17.15h-12.01ZM124.42,24.37h10.43c5.22,0,8.79-2.72,8.79-6.93,0-4.22-3.57-6.93-8.79-6.93h-10.43s0,13.86,0,13.86Z"/>
+        <path d="M172.94,10.36v9.79s24.66,0,24.66,0v9.51s-24.66,0-24.66,0v10.79s27.23,0,27.23,0v9.51s-37.81,0-37.81,0V.86s37.81,0,37.81,0v9.51s-27.23,0-27.23,0Z"/>
+      </svg>
+    </a>
+
+    <nav class="nav__group nav__group--right">
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__right">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="active" data-lang="en">EN</button>
+        <span class="sep">/</span>
+        <button data-lang="pl">PL</button>
+      </div>
+      <button class="nav__burger" aria-label="Menu" id="burger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">×</button>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="subscription.html">Subscription</a>
+  <a href="about.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <div class="hero__eyebrow eyebrow">High protein. Pure simplicity.</div>
+        <h1>Protein,<br><em>finally</em><br>right.</h1>
+        <p class="hero__sub">A high protein smoothie engineered without compromise. No whey. No added sugar. No preservatives. Just up to 72&nbsp;g of clean, natural protein in every bottle.</p>
+        <div class="hero__cta">
+          <a href="products.html" class="btn btn-primary btn-icon">Shop the range</a>
+          <a href="about.html" class="btn btn-ghost">Our story</a>
+        </div>
+      </div>
+      <div class="hero__bottle">
+        <img src="assets/bottles/strawberry.png" alt="QURE Strawberry - High Protein Smoothie">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MARQUEE ====== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__item">100% Natural Protein</span>
+    <span class="marquee__item">100% Chicken Breast</span>
+    <span class="marquee__item">No Whey</span>
+    <span class="marquee__item">No Added Sugar</span>
+    <span class="marquee__item">Low Fat</span>
+    <span class="marquee__item">No Preservatives</span>
+    <span class="marquee__item">Lactose Free</span>
+    <span class="marquee__item">100% Natural Protein</span>
+    <span class="marquee__item">100% Chicken Breast</span>
+    <span class="marquee__item">No Whey</span>
+    <span class="marquee__item">No Added Sugar</span>
+    <span class="marquee__item">Low Fat</span>
+    <span class="marquee__item">No Preservatives</span>
+    <span class="marquee__item">Lactose Free</span>
+  </div>
+</div>
+
+<!-- ====== BENEFITS GRID ====== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="benefits">
+      <div class="benefit">
+        <img class="benefit__icon" src="assets/icons/high_protein.svg" alt="High protein">
+      </div>
+      <div class="benefit">
+        <img class="benefit__icon" src="assets/icons/chicken_breast.svg" alt="100% chicken breast">
+      </div>
+      <div class="benefit">
+        <img class="benefit__icon" src="assets/icons/natural_ingredients.svg" alt="100% natural ingredients">
+      </div>
+      <div class="benefit">
+        <img class="benefit__icon" src="assets/icons/hpp.svg" alt="High pressure processing">
+      </div>
+      <div class="benefit">
+        <img class="benefit__icon" src="assets/icons/no_added_sugar.svg" alt="No added sugar">
+      </div>
+      <div class="benefit">
+        <img class="benefit__icon" src="assets/icons/low_fat.svg" alt="Low fat">
+      </div>
+      <div class="benefit">
+        <img class="benefit__icon" src="assets/icons/no_preservatives.svg" alt="No preservatives">
+      </div>
+      <div class="benefit">
+        <img class="benefit__icon" src="assets/icons/lactose_free.svg" alt="Lactose free">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BRAND MARK SCROLL REVEAL ====== -->
+<section class="brand-mark-section" aria-hidden="true">
+  <div class="brand-mark-track">
+    <svg class="brand-mark" viewBox="0 0 98.91 98.91" xmlns="http://www.w3.org/2000/svg">
+      <rect class="brand-mark__bg" width="98.91" height="98.91"/>
+      <path class="brand-mark__letter brand-mark__letter--tl" d="M39.39,33.5l3.46,3.03-4.05,4.7-3.78-3.3c-3.3,2.49-7.4,3.94-11.83,3.94-10.64,0-19.72-8.81-19.72-19.23,0-10.43,9.08-19.18,19.72-19.18,10.75,0,19.72,8.75,19.72,19.18,0,4-1.3,7.73-3.51,10.86ZM29.13,32.86l-4.32-3.78,4.05-4.7,4.48,3.89c.92-1.67,1.4-3.62,1.4-5.62,0-6.43-5.29-11.94-11.56-11.94s-11.51,5.51-11.51,11.94c0,6.48,5.29,11.99,11.51,11.99,2.16,0,4.21-.65,5.94-1.78Z"/>
+      <path class="brand-mark__letter brand-mark__letter--tr" d="M78.75,37.07h-21.07s0-7.94,0-7.94h20.74c5.73,0,9.78-3.67,9.78-8.86,0-5.13-4.05-8.81-9.78-8.81h-20.74s0-8,0-8h21.07c9.78,0,16.69,6.97,16.69,16.8,0,9.89-6.91,16.8-16.69,16.8Z"/>
+      <path class="brand-mark__letter brand-mark__letter--bl" d="M40.58,73.13l-12.05,8.48v5.89s12.05,0,12.05,0v7.94s-37.11,0-37.11,0v-16.69c0-8.05,5.19-13.99,12.53-13.99,5.51,0,9.83,3.35,11.61,8.43l12.97-9.13v9.08ZM21.24,87.5v-7.89c0-3.94-2.05-6.64-5.24-6.64s-5.24,2.7-5.24,6.64v7.89s10.48,0,10.48,0Z"/>
+      <path class="brand-mark__letter brand-mark__letter--br" d="M74.86,65.52v7.4s18.64,0,18.64,0v7.19s-18.64,0-18.64,0v8.16s20.58,0,20.58,0v7.19s-28.58,0-28.58,0v-37.11s28.58,0,28.58,0v7.19s-20.58,0-20.58,0Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ====== FLAVORS ====== -->
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head__row">
+        <div>
+          <div class="eyebrow" style="margin-bottom:18px">Flavor lineup</div>
+          <h2>Pick your<br>flavor.</h2>
+        </div>
+        <a href="products.html" class="btn btn-ghost btn-icon">See all products</a>
+      </div>
+    </div>
+
+    <div class="flavors">
+      <a href="products.html#strawberry" class="flavor-card t-strawberry">
+        <div class="flavor-card__bottle"><img src="assets/bottles/strawberry-sm.png" alt="QURE Strawberry"></div>
+        <img class="flavor-card__name" src="assets/icons/flavor-name-only-strawberry.svg" alt="Strawberry">
+        <img class="flavor-card__protein" src="assets/icons/protein-strawberry.svg" alt="72g protein">
+        <span class="flavor-card__cta">View</span>
+      </a>
+      <a href="products.html#lime" class="flavor-card t-lime">
+        <div class="flavor-card__bottle"><img src="assets/bottles/lime-sm.png" alt="QURE Lime"></div>
+        <img class="flavor-card__name" src="assets/icons/flavor-name-only-lime.svg" alt="Lime">
+        <img class="flavor-card__protein" src="assets/icons/protein-lime.svg" alt="72g protein">
+        <span class="flavor-card__cta">View</span>
+      </a>
+      <a href="products.html#mango" class="flavor-card t-mango">
+        <div class="flavor-card__bottle"><img src="assets/bottles/mango-sm.png" alt="QURE Mango"></div>
+        <img class="flavor-card__name" src="assets/icons/flavor-name-only-mango.svg" alt="Mango">
+        <img class="flavor-card__protein" src="assets/icons/protein-mango.svg" alt="66g protein">
+        <span class="flavor-card__cta">View</span>
+      </a>
+      <a href="products.html#blueberry" class="flavor-card t-blueberry">
+        <div class="flavor-card__bottle"><img src="assets/bottles/blueberry-sm.png" alt="QURE Blueberry"></div>
+        <img class="flavor-card__name" src="assets/icons/flavor-name-only-blueberry.svg" alt="Blueberry">
+        <img class="flavor-card__protein" src="assets/icons/protein-blueberry.svg" alt="68g protein">
+        <span class="flavor-card__cta">View</span>
+      </a>
+      <a href="products.html#blueberry-woman" class="flavor-card t-blueberry-woman">
+        <div class="flavor-card__bottle"><img src="assets/bottles/blueberry-woman-sm.png" alt="QURE Blueberry for Woman"></div>
+        <img class="flavor-card__name" src="assets/icons/flavor-name-only-blueberry-woman.svg" alt="Blueberry for Woman">
+        <img class="flavor-card__protein" src="assets/icons/protein-blueberry-woman.svg" alt="72g protein">
+        <span class="flavor-card__cta">View</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SPLIT - promise ====== -->
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__img">
+        <img src="assets/bottles/lime.png" alt="QURE Lime bottle">
+      </div>
+      <div class="split__text">
+        <div class="eyebrow" style="margin-bottom:18px">The QURE promise</div>
+        <h2>What's inside is what matters.</h2>
+        <p>We started QURE because we were tired of choosing between protein content and clean ingredients. Most high-protein drinks either taste like chalk or read like a chemistry textbook.</p>
+        <p>So we engineered a smoothie that delivers serious protein from a 100% natural source - and skipped everything that doesn't belong: whey, added sugar, preservatives, lactose.</p>
+        <p>The result is a smoothie that does its job. Nothing more, nothing less.</p>
+        <div style="margin-top:32px">
+          <a href="research.html" class="btn btn-ghost btn-icon">Read the research</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SPLIT - flavor ====== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="split reverse">
+      <div class="split__text">
+        <div class="eyebrow" style="margin-bottom:18px">Taste first</div>
+        <h2>Smoothies that earn their place in the fridge.</h2>
+        <p>Each flavor is built around real fruit notes - strawberry, lime, mango, blueberry - and tuned to taste like a smoothie, not a supplement. Drink it cold, drink it post-workout, drink it instead of breakfast. It works.</p>
+        <div style="margin-top:32px">
+          <a href="products.html" class="btn btn-primary btn-icon">Explore flavors</a>
+        </div>
+      </div>
+      <div class="split__img">
+        <img src="assets/bottles/mango.png" alt="QURE Mango bottle">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA BANNER ====== -->
+<section class="section">
+  <div class="container">
+    <div style="background:#000; color:var(--white); border-radius:var(--radius-lg); padding:clamp(48px,6vw,96px); text-align:center;">
+      <div class="eyebrow" style="color:#9a9a9a; margin-bottom:20px">Ready to upgrade?</div>
+      <h2 style="font-size:clamp(36px,5vw,72px); max-width:18ch; margin:0 auto 28px; letter-spacing:-0.035em; color:#fff;">Subscribe and save 15% on every bottle.</h2>
+      <a href="subscription.html" class="btn btn-inverted btn-icon">Start<br>subscription</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <svg class="footer__logo-wide" viewBox="0 0 200.17 50.81" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <path d="M47.53,39.74l4.57,4-5.36,6.22-5-4.36c-4.36,3.29-9.79,5.22-15.65,5.22C12.01,50.81,0,39.16,0,25.37,0,11.58,12.01,0,26.09,0c14.22,0,26.09,11.58,26.09,25.37,0,5.29-1.72,10.22-4.65,14.36ZM33.95,38.88l-5.72-5,5.36-6.22,5.93,5.15c1.21-2.22,1.86-4.79,1.86-7.43,0-8.5-7-15.79-15.29-15.79s-15.22,7.29-15.22,15.79,7,15.87,15.22,15.87c2.86,0,5.57-.86,7.86-2.36Z"/>
+      <path d="M59.89,28.73V.86s10.51,0,10.51,0v27.44c0,7.58,4.86,12.94,11.72,12.94,6.79,0,11.65-5.36,11.65-12.94V.86s10.58,0,10.58,0v27.87c0,12.94-9.22,22.08-22.23,22.08-13.08,0-22.23-9.15-22.23-22.08Z"/>
+      <path d="M143.43,49.96l-11.22-15.94h-7.79s0,15.94,0,15.94h-10.51s0-49.1,0-49.1h22.08c10.65,0,18.51,6.86,18.51,16.58,0,7.29-4.43,13.01-11.15,15.37l12.08,17.15h-12.01ZM124.42,24.37h10.43c5.22,0,8.79-2.72,8.79-6.93,0-4.22-3.57-6.93-8.79-6.93h-10.43s0,13.86,0,13.86Z"/>
+      <path d="M172.94,10.36v9.79s24.66,0,24.66,0v9.51s-24.66,0-24.66,0v10.79s27.23,0,27.23,0v9.51s-37.81,0-37.81,0V.86s37.81,0,37.81,0v9.51s-27.23,0-27.23,0Z"/>
+    </svg>
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p>High protein smoothies, made right. 100% natural protein. No whey, no added sugar, no preservatives.</p>
+        <div class="footer__newsletter" style="margin-top:24px">
+          <form onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='✓';">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="products.html">All products</a></li>
+          <li><a href="products.html#strawberry">Strawberry</a></li>
+          <li><a href="products.html#lime">Lime</a></li>
+          <li><a href="products.html#mango">Mango</a></li>
+          <li><a href="products.html#blueberry">Blueberry</a></li>
+          <li><a href="products.html#blueberry-woman">Blueberry / for Woman</a></li>
+          <li><a href="subscription.html">Subscription</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Brand</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 QURE PROTEIN. All rights reserved.</span>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reserve bold width on nav links (prevents layout shift on hover/active)
+  (function () {
+    document.querySelectorAll('.nav__links a').forEach(a => a.setAttribute('data-text', a.textContent.trim()));
+  })();
+  // Sticky nav scrolled state
+  (function () {
+    const nav = document.getElementById('nav');
+    const setScrolled = () => nav.classList.toggle('scrolled', window.scrollY > 4);
+    window.addEventListener('scroll', setScrolled, { passive: true });
+    setScrolled();
+  })();
+
+  // Mobile menu
+  (function () {
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+    const close = document.getElementById('menuClose');
+    const open = () => { menu.classList.add('open'); menu.setAttribute('aria-hidden','false'); };
+    const shut = () => { menu.classList.remove('open'); menu.setAttribute('aria-hidden','true'); };
+    burger && burger.addEventListener('click', open);
+    close && close.addEventListener('click', shut);
+    menu && menu.querySelectorAll('a').forEach(a => a.addEventListener('click', shut));
+  })();
+
+  // Brand mark scroll reveal — 4 letters fly in from corners, then bg cycles flavors
+  (function () {
+    const section = document.querySelector('.brand-mark-section');
+    if (!section) return;
+    const tl = section.querySelector('.brand-mark__letter--tl');
+    const tr = section.querySelector('.brand-mark__letter--tr');
+    const bl = section.querySelector('.brand-mark__letter--bl');
+    const br = section.querySelector('.brand-mark__letter--br');
+    const bg = section.querySelector('.brand-mark__bg');
+    if (!tl || !tr || !bl || !br || !bg) return;
+
+    // Flavor color palette — repeated for very fast cycling
+    const FLAVORS = [
+      [237, 28, 36],       // strawberry
+      [96, 187, 70],       // lime
+      [248, 154, 28],      // mango
+      [146, 121, 183]      // blueberry
+    ];
+    const COLORS = [];
+    for (let r = 0; r < 6; r++) {
+      for (let i = 0; i < FLAVORS.length; i++) COLORS.push(FLAVORS[i]);
+    }
+
+    function colorAt(cp) {
+      if (cp <= 0) return 'rgb(0,0,0)';
+      if (cp >= 1) return 'rgb(' + COLORS[COLORS.length - 1].join(',') + ')';
+      const idx = Math.min(Math.floor(cp * COLORS.length), COLORS.length - 1);
+      const c = COLORS[idx];
+      return 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')';
+    }
+
+    let ticking = false;
+    function update() {
+      const rect = section.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const sectionH = rect.height;
+      // Overall progress: section just entering bottom (0) -> section fully scrolled past top (1)
+      const totalDistance = vh + sectionH;
+      const traveled = vh - rect.top;
+      let P = traveled / totalDistance;
+      if (P < 0) P = 0;
+      if (P > 1) P = 1;
+
+      // Phase 1: letters fly in during P window [FLY_START, FLY_END]
+      const FLY_START = 0.12;
+      const FLY_END = 0.35;
+      let p1 = (P - FLY_START) / (FLY_END - FLY_START);
+      if (p1 < 0) p1 = 0;
+      if (p1 > 1) p1 = 1;
+      const eased = 1 - Math.pow(1 - p1, 3);
+      const k = (1 - eased) * 70; // vw / vh travel
+      tl.style.transform = 'translate(' + (-k) + 'vw, ' + (-k) + 'vh)';
+      tr.style.transform = 'translate(' + ( k) + 'vw, ' + (-k) + 'vh)';
+      bl.style.transform = 'translate(' + (-k) + 'vw, ' + ( k) + 'vh)';
+      br.style.transform = 'translate(' + ( k) + 'vw, ' + ( k) + 'vh)';
+
+      // Phase 2: background color cycles through flavors after letters arrive
+      let cp = (P - FLY_END) / (1 - FLY_END);
+      if (cp < 0) cp = 0;
+      if (cp > 1) cp = 1;
+      bg.style.fill = colorAt(cp);
+
+      ticking = false;
+    }
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  })();
+
+  // Language switch (visual only - actual localization later)
+  (function () {
+    document.querySelectorAll('.lang-switch button').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('.lang-switch button').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        // Hook for future i18n: document.documentElement.lang = b.dataset.lang;
+      });
+    });
+  })();
+
+  // QURE morph effect: wrap each .btn's content in a span and add an absolutely-positioned Q U R E grid that reveals on hover
+  (function () {
+    document.querySelectorAll('.btn').forEach(btn => {
+      if (btn.dataset.qureMorph) return;
+      btn.dataset.qureMorph = '1';
+      const original = btn.innerHTML;
+      btn.innerHTML =
+        '<span class="btn__text">' + original + '</span>' +
+        '<span class="btn__qure" aria-hidden="true">' +
+          '<svg viewBox="0 0 98.91 98.91" xmlns="http://www.w3.org/2000/svg">' +
+            '<path class="q" d="M39.39,33.5l3.46,3.03-4.05,4.7-3.78-3.3c-3.3,2.49-7.4,3.94-11.83,3.94-10.64,0-19.72-8.81-19.72-19.23,0-10.43,9.08-19.18,19.72-19.18,10.75,0,19.72,8.75,19.72,19.18,0,4-1.3,7.73-3.51,10.86ZM29.13,32.86l-4.32-3.78,4.05-4.7,4.48,3.89c.92-1.67,1.4-3.62,1.4-5.62,0-6.43-5.29-11.94-11.56-11.94s-11.51,5.51-11.51,11.94c0,6.48,5.29,11.99,11.51,11.99,2.16,0,4.21-.65,5.94-1.78Z"/>' +
+            '<path class="u" d="M78.75,37.07h-21.07s0-7.94,0-7.94h20.74c5.73,0,9.78-3.67,9.78-8.86,0-5.13-4.05-8.81-9.78-8.81h-20.74s0-8,0-8h21.07c9.78,0,16.69,6.97,16.69,16.8,0,9.89-6.91,16.8-16.69,16.8Z"/>' +
+            '<path class="r" d="M40.58,73.13l-12.05,8.48v5.89s12.05,0,12.05,0v7.94s-37.11,0-37.11,0v-16.69c0-8.05,5.19-13.99,12.53-13.99,5.51,0,9.83,3.35,11.61,8.43l12.97-9.13v9.08ZM21.24,87.5v-7.89c0-3.94-2.05-6.64-5.24-6.64s-5.24,2.7-5.24,6.64v7.89s10.48,0,10.48,0Z"/>' +
+            '<path class="e" d="M74.86,65.52v7.4s18.64,0,18.64,0v7.19s-18.64,0-18.64,0v8.16s20.58,0,20.58,0v7.19s-28.58,0-28.58,0v-37.11s28.58,0,28.58,0v7.19s-20.58,0-20.58,0Z"/>' +
+          '</svg>' +
+        '</span>';
+    });
+  })();
+
+  </script>
+
+</body>
+</html>

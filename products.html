@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - QURE PROTEIN</title>
+<meta name="description" content="Explore the QURE flavor lineup: Strawberry, Lime, Mango, Blueberry. Up to 72g of natural protein per bottle.">
+
+<link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/swi6zwk.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="assets/qure-logo.svg">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <nav class="nav__group nav__group--left">
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="subscription.html">Subscription</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html" class="nav__logo" aria-label="QURE home">
+      <svg viewBox="0 0 200.17 50.81" xmlns="http://www.w3.org/2000/svg">
+        <path d="M47.53,39.74l4.57,4-5.36,6.22-5-4.36c-4.36,3.29-9.79,5.22-15.65,5.22C12.01,50.81,0,39.16,0,25.37,0,11.58,12.01,0,26.09,0c14.22,0,26.09,11.58,26.09,25.37,0,5.29-1.72,10.22-4.65,14.36ZM33.95,38.88l-5.72-5,5.36-6.22,5.93,5.15c1.21-2.22,1.86-4.79,1.86-7.43,0-8.5-7-15.79-15.29-15.79s-15.22,7.29-15.22,15.79,7,15.87,15.22,15.87c2.86,0,5.57-.86,7.86-2.36Z"/>
+        <path d="M59.89,28.73V.86s10.51,0,10.51,0v27.44c0,7.58,4.86,12.94,11.72,12.94,6.79,0,11.65-5.36,11.65-12.94V.86s10.58,0,10.58,0v27.87c0,12.94-9.22,22.08-22.23,22.08-13.08,0-22.23-9.15-22.23-22.08Z"/>
+        <path d="M143.43,49.96l-11.22-15.94h-7.79s0,15.94,0,15.94h-10.51s0-49.1,0-49.1h22.08c10.65,0,18.51,6.86,18.51,16.58,0,7.29-4.43,13.01-11.15,15.37l12.08,17.15h-12.01ZM124.42,24.37h10.43c5.22,0,8.79-2.72,8.79-6.93,0-4.22-3.57-6.93-8.79-6.93h-10.43s0,13.86,0,13.86Z"/>
+        <path d="M172.94,10.36v9.79s24.66,0,24.66,0v9.51s-24.66,0-24.66,0v10.79s27.23,0,27.23,0v9.51s-37.81,0-37.81,0V.86s37.81,0,37.81,0v9.51s-27.23,0-27.23,0Z"/>
+      </svg>
+    </a>
+
+    <nav class="nav__group nav__group--right">
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav__right">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="active" data-lang="en">EN</button>
+        <span class="sep">/</span>
+        <button data-lang="pl">PL</button>
+      </div>
+      <button class="nav__burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">×</button>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="subscription.html">Subscription</a>
+  <a href="about.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow" style="margin-bottom:24px">The lineup</div>
+    <h1>No shortcuts.</h1>
+    <p class="page-hero__sub">Each QURE smoothie is built on the same foundation - 100% natural protein, no whey, no added sugar, low fat, lactose free, no preservatives. The only thing that changes is the flavor.</p>
+  </div>
+</section>
+
+<!-- Product blocks -->
+<section class="section-tight">
+  <div class="container">
+
+    <!-- Strawberry -->
+    <article id="strawberry" class="split" style="padding:clamp(40px,5vw,80px) 0">
+      <div class="split__img">
+        <img src="assets/bottles/strawberry.png" alt="QURE Strawberry">
+      </div>
+      <div class="split__text">
+        <div class="product-id">
+          <img class="product-id__name" src="assets/icons/flavor-strawberry.svg" alt="QURE Strawberry">
+        </div>
+        <p>A bright strawberry note that drinks like a real fruit smoothie. 72g of natural protein per bottle, with the clean finish of cold-pressed fruit and zero added sugar.</p>
+        <ul style="list-style:none; padding:0; margin:24px 0 32px; display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; max-width:480px; font-family: var(--font-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+          <li><strong>Protein</strong> / 72<span class="lc">g</span></li>
+          <li><strong>Sugar</strong> / 0<span class="lc">g</span> added</li>
+          <li><strong>Fat</strong> / Low</li>
+          <li><strong>Lactose</strong> / Free</li>
+          <li><strong>Whey</strong> / None</li>
+          <li><strong>Preservatives</strong> / None</li>
+        </ul>
+        <div class="product-cta-row">
+          <img class="product-cta-row__protein" src="assets/icons/protein-strawberry.svg" alt="72g protein">
+          <a href="#" class="btn btn-primary btn-icon">Add to cart<br>159 THB</a>
+          <a href="subscription.html" class="btn btn-ghost">Subscribe</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Lime -->
+    <article id="lime" class="split reverse" style="padding:clamp(40px,5vw,80px) 0">
+      <div class="split__text">
+        <div class="product-id">
+          <img class="product-id__name" src="assets/icons/flavor-lime.svg" alt="QURE Lime">
+        </div>
+        <p>Crisp lime with a clean herbal edge. The flavor that wakes you up at 7am or sharpens you up at 7pm. 72g of natural protein and zero of the usual nonsense.</p>
+        <ul style="list-style:none; padding:0; margin:24px 0 32px; display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; max-width:480px; font-family: var(--font-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+          <li><strong>Protein</strong> / 72<span class="lc">g</span></li>
+          <li><strong>Sugar</strong> / 0<span class="lc">g</span> added</li>
+          <li><strong>Fat</strong> / Low</li>
+          <li><strong>Lactose</strong> / Free</li>
+          <li><strong>Whey</strong> / None</li>
+          <li><strong>Preservatives</strong> / None</li>
+        </ul>
+        <div class="product-cta-row">
+          <img class="product-cta-row__protein" src="assets/icons/protein-lime.svg" alt="72g protein">
+          <a href="#" class="btn btn-primary btn-icon">Add to cart<br>159 THB</a>
+          <a href="subscription.html" class="btn btn-ghost">Subscribe</a>
+        </div>
+      </div>
+      <div class="split__img">
+        <img src="assets/bottles/lime.png" alt="QURE Lime">
+      </div>
+    </article>
+
+    <!-- Mango -->
+    <article id="mango" class="split" style="padding:clamp(40px,5vw,80px) 0">
+      <div class="split__img">
+        <img src="assets/bottles/mango.png" alt="QURE Mango">
+      </div>
+      <div class="split__text">
+        <div class="product-id">
+          <img class="product-id__name" src="assets/icons/flavor-mango.svg" alt="QURE Mango">
+        </div>
+        <p>Tropical mango with the body of a real smoothie. 66g of natural protein, the sweetness of the fruit itself, and no compromise on what's actually in the bottle.</p>
+        <ul style="list-style:none; padding:0; margin:24px 0 32px; display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; max-width:480px; font-family: var(--font-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+          <li><strong>Protein</strong> / 66<span class="lc">g</span></li>
+          <li><strong>Sugar</strong> / 0<span class="lc">g</span> added</li>
+          <li><strong>Fat</strong> / Low</li>
+          <li><strong>Lactose</strong> / Free</li>
+          <li><strong>Whey</strong> / None</li>
+          <li><strong>Preservatives</strong> / None</li>
+        </ul>
+        <div class="product-cta-row">
+          <img class="product-cta-row__protein" src="assets/icons/protein-mango.svg" alt="66g protein">
+          <a href="#" class="btn btn-primary btn-icon">Add to cart<br>159 THB</a>
+          <a href="subscription.html" class="btn btn-ghost">Subscribe</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Blueberry -->
+    <article id="blueberry" class="split reverse" style="padding:clamp(40px,5vw,80px) 0">
+      <div class="split__text">
+        <div class="product-id">
+          <img class="product-id__name" src="assets/icons/flavor-blueberry.svg" alt="QURE Blueberry">
+        </div>
+        <p>Blueberry with the kind of depth you expect from the fresh fruit, not a syrup. 68g of natural protein in every bottle, and a finish that's surprisingly smooth.</p>
+        <ul style="list-style:none; padding:0; margin:24px 0 32px; display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; max-width:480px; font-family: var(--font-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+          <li><strong>Protein</strong> / 68<span class="lc">g</span></li>
+          <li><strong>Sugar</strong> / 0<span class="lc">g</span> added</li>
+          <li><strong>Fat</strong> / Low</li>
+          <li><strong>Lactose</strong> / Free</li>
+          <li><strong>Whey</strong> / None</li>
+          <li><strong>Preservatives</strong> / None</li>
+        </ul>
+        <div class="product-cta-row">
+          <img class="product-cta-row__protein" src="assets/icons/protein-blueberry.svg" alt="68g protein">
+          <a href="#" class="btn btn-primary btn-icon">Add to cart<br>159 THB</a>
+          <a href="subscription.html" class="btn btn-ghost">Subscribe</a>
+        </div>
+      </div>
+      <div class="split__img">
+        <img src="assets/bottles/blueberry.png" alt="QURE Blueberry">
+      </div>
+    </article>
+
+    <!-- Blueberry for Woman -->
+    <article id="blueberry-woman" class="split" style="padding:clamp(40px,5vw,80px) 0">
+      <div class="split__img">
+        <img src="assets/bottles/blueberry-woman.png" alt="QURE Blueberry for Woman">
+      </div>
+      <div class="split__text">
+        <div class="product-id">
+          <img class="product-id__name" src="assets/icons/flavor-blueberry-woman.svg" alt="QURE Blueberry for Woman">
+        </div>
+        <p>The same clean blueberry note, formulated specifically with women in mind. 72g of natural protein per bottle, a softer body, and the same uncompromising ingredient list.</p>
+        <ul style="list-style:none; padding:0; margin:24px 0 32px; display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; max-width:480px; font-family: var(--font-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+          <li><strong>Protein</strong> / 72<span class="lc">g</span></li>
+          <li><strong>Sugar</strong> / 0<span class="lc">g</span> added</li>
+          <li><strong>Fat</strong> / Low</li>
+          <li><strong>Lactose</strong> / Free</li>
+          <li><strong>Whey</strong> / None</li>
+          <li><strong>Preservatives</strong> / None</li>
+        </ul>
+        <div class="product-cta-row">
+          <img class="product-cta-row__protein" src="assets/icons/protein-blueberry-woman.svg" alt="72g protein">
+          <a href="#" class="btn btn-primary btn-icon">Add to cart<br>159 THB</a>
+          <a href="subscription.html" class="btn btn-ghost">Subscribe</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Variety pack callout -->
+<section class="section-tight">
+  <div class="container">
+    <div class="variety-pack">
+      <div class="variety-pack__text">
+        <div class="eyebrow" style="margin-bottom:18px">Try the full lineup</div>
+        <h2 style="font-size:clamp(32px,4vw,56px); letter-spacing:-0.03em; margin-bottom:18px">The variety pack - all five flavors, one box.</h2>
+        <p style="color:var(--ink-soft); max-width:48ch; margin-bottom:32px; font-size:17px; line-height:1.5;">12 bottles. Three of each flavor. Free shipping. The cleanest way to figure out which one you'll keep coming back to.</p>
+        <a href="#" class="btn btn-primary btn-icon">Variety pack<br>1599 THB</a>
+      </div>
+      <div class="variety-pack__bottles">
+        <img src="assets/bottles/strawberry-sm.png" alt="">
+        <img src="assets/bottles/lime-sm.png" alt="">
+        <img src="assets/bottles/mango-sm.png" alt="">
+        <img src="assets/bottles/blueberry-sm.png" alt="">
+        <img src="assets/bottles/blueberry-woman-sm.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <svg class="footer__logo-wide" viewBox="0 0 200.17 50.81" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <path d="M47.53,39.74l4.57,4-5.36,6.22-5-4.36c-4.36,3.29-9.79,5.22-15.65,5.22C12.01,50.81,0,39.16,0,25.37,0,11.58,12.01,0,26.09,0c14.22,0,26.09,11.58,26.09,25.37,0,5.29-1.72,10.22-4.65,14.36ZM33.95,38.88l-5.72-5,5.36-6.22,5.93,5.15c1.21-2.22,1.86-4.79,1.86-7.43,0-8.5-7-15.79-15.29-15.79s-15.22,7.29-15.22,15.79,7,15.87,15.22,15.87c2.86,0,5.57-.86,7.86-2.36Z"/>
+      <path d="M59.89,28.73V.86s10.51,0,10.51,0v27.44c0,7.58,4.86,12.94,11.72,12.94,6.79,0,11.65-5.36,11.65-12.94V.86s10.58,0,10.58,0v27.87c0,12.94-9.22,22.08-22.23,22.08-13.08,0-22.23-9.15-22.23-22.08Z"/>
+      <path d="M143.43,49.96l-11.22-15.94h-7.79s0,15.94,0,15.94h-10.51s0-49.1,0-49.1h22.08c10.65,0,18.51,6.86,18.51,16.58,0,7.29-4.43,13.01-11.15,15.37l12.08,17.15h-12.01ZM124.42,24.37h10.43c5.22,0,8.79-2.72,8.79-6.93,0-4.22-3.57-6.93-8.79-6.93h-10.43s0,13.86,0,13.86Z"/>
+      <path d="M172.94,10.36v9.79s24.66,0,24.66,0v9.51s-24.66,0-24.66,0v10.79s27.23,0,27.23,0v9.51s-37.81,0-37.81,0V.86s37.81,0,37.81,0v9.51s-27.23,0-27.23,0Z"/>
+    </svg>
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p>High protein smoothies, made right. 100% natural protein. No whey, no added sugar, no preservatives.</p>
+        <div class="footer__newsletter" style="margin-top:24px">
+          <form onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='✓';">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="products.html">All products</a></li>
+          <li><a href="products.html#strawberry">Strawberry</a></li>
+          <li><a href="products.html#lime">Lime</a></li>
+          <li><a href="products.html#mango">Mango</a></li>
+          <li><a href="products.html#blueberry">Blueberry</a></li>
+          <li><a href="products.html#blueberry-woman">Blueberry / for Woman</a></li>
+          <li><a href="subscription.html">Subscription</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Brand</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 QURE PROTEIN. All rights reserved.</span>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reserve bold width on nav links (prevents layout shift on hover/active)
+  (function () {
+    document.querySelectorAll('.nav__links a').forEach(a => a.setAttribute('data-text', a.textContent.trim()));
+  })();
+  (function () {
+    const nav = document.getElementById('nav');
+    const setScrolled = () => nav.classList.toggle('scrolled', window.scrollY > 4);
+    window.addEventListener('scroll', setScrolled, { passive: true });
+    setScrolled();
+  })();
+  (function () {
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+    const close = document.getElementById('menuClose');
+    const open = () => { menu.classList.add('open'); menu.setAttribute('aria-hidden','false'); };
+    const shut = () => { menu.classList.remove('open'); menu.setAttribute('aria-hidden','true'); };
+    burger && burger.addEventListener('click', open);
+    close && close.addEventListener('click', shut);
+    menu && menu.querySelectorAll('a').forEach(a => a.addEventListener('click', shut));
+  })();
+  (function () {
+    document.querySelectorAll('.lang-switch button').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('.lang-switch button').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+      });
+    });
+  })();
+
+  // QURE morph effect: wrap each .btn's content in a span and add an absolutely-positioned Q U R E grid that reveals on hover
+  (function () {
+    document.querySelectorAll('.btn').forEach(btn => {
+      if (btn.dataset.qureMorph) return;
+      btn.dataset.qureMorph = '1';
+      const original = btn.innerHTML;
+      btn.innerHTML =
+        '<span class="btn__text">' + original + '</span>' +
+        '<span class="btn__qure" aria-hidden="true">' +
+          '<svg viewBox="0 0 98.91 98.91" xmlns="http://www.w3.org/2000/svg">' +
+            '<path class="q" d="M39.39,33.5l3.46,3.03-4.05,4.7-3.78-3.3c-3.3,2.49-7.4,3.94-11.83,3.94-10.64,0-19.72-8.81-19.72-19.23,0-10.43,9.08-19.18,19.72-19.18,10.75,0,19.72,8.75,19.72,19.18,0,4-1.3,7.73-3.51,10.86ZM29.13,32.86l-4.32-3.78,4.05-4.7,4.48,3.89c.92-1.67,1.4-3.62,1.4-5.62,0-6.43-5.29-11.94-11.56-11.94s-11.51,5.51-11.51,11.94c0,6.48,5.29,11.99,11.51,11.99,2.16,0,4.21-.65,5.94-1.78Z"/>' +
+            '<path class="u" d="M78.75,37.07h-21.07s0-7.94,0-7.94h20.74c5.73,0,9.78-3.67,9.78-8.86,0-5.13-4.05-8.81-9.78-8.81h-20.74s0-8,0-8h21.07c9.78,0,16.69,6.97,16.69,16.8,0,9.89-6.91,16.8-16.69,16.8Z"/>' +
+            '<path class="r" d="M40.58,73.13l-12.05,8.48v5.89s12.05,0,12.05,0v7.94s-37.11,0-37.11,0v-16.69c0-8.05,5.19-13.99,12.53-13.99,5.51,0,9.83,3.35,11.61,8.43l12.97-9.13v9.08ZM21.24,87.5v-7.89c0-3.94-2.05-6.64-5.24-6.64s-5.24,2.7-5.24,6.64v7.89s10.48,0,10.48,0Z"/>' +
+            '<path class="e" d="M74.86,65.52v7.4s18.64,0,18.64,0v7.19s-18.64,0-18.64,0v8.16s20.58,0,20.58,0v7.19s-28.58,0-28.58,0v-37.11s28.58,0,28.58,0v7.19s-20.58,0-20.58,0Z"/>' +
+          '</svg>' +
+        '</span>';
+    });
+  })();
+
+  </script>
+</body>
+</html>
