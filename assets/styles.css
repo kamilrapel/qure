@@ -1291,6 +1291,9 @@ p { margin: 0; }
   .flavor-card__name { margin-top: 4px; max-height: 56px; }
   .flavor-card__protein { margin-top: 14px; }
 
+  /* Mobile: hide bottle image in The QURE promise split section */
+  .split__img--promise { display: none; }
+
   /* Buttons: slightly smaller on mobile + centered (square buttons only, not text) */
   .btn { width: 112px; height: 112px; font-size: 12px; padding: 10px; gap: 4px; transition: none; }
   .btn-sm { width: 84px; height: 84px; font-size: 10px; }
