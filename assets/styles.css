@@ -16,11 +16,11 @@
   --white: #ffffff;
   --black: #000000;
 
-  /* Flavor accents */
-  --strawberry: #e63946;
-  --lime: #5BC93E;
-  --mango: #F39B26;
-  --blueberry: #B89DD0;
+  /* Flavor accents — exact colors from SVG icons */
+  --strawberry: #ed1c24;
+  --lime: #60bb46;
+  --mango: #f89a1c;
+  --blueberry: #9279b7;
 
   --font-display: 'Metropolis', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --font-accent: 'alwyn-new-rounded-web', 'Metropolis', system-ui, sans-serif;
@@ -214,6 +214,29 @@ p { margin: 0; }
   opacity: 1;
 }
 
+/* Per-product buttons: black default, flavor-color on hover with black font */
+#strawberry .btn-primary:hover, #strawberry .btn-ghost:hover {
+  background: var(--strawberry); border-color: var(--strawberry); color: #000;
+}
+#lime .btn-primary:hover, #lime .btn-ghost:hover {
+  background: var(--lime); border-color: var(--lime); color: #000;
+}
+#mango .btn-primary:hover, #mango .btn-ghost:hover {
+  background: var(--mango); border-color: var(--mango); color: #000;
+}
+#blueberry .btn-primary:hover, #blueberry .btn-ghost:hover {
+  background: var(--blueberry); border-color: var(--blueberry); color: #000;
+}
+#blueberry-woman .btn-primary:hover, #blueberry-woman .btn-ghost:hover {
+  background: #9279b7; border-color: #9279b7; color: #000;
+}
+/* On the products page, the QURE-letter morph on hover should be black so it stays visible on the flavor-color background */
+#strawberry .btn__qure path,
+#lime .btn__qure path,
+#mango .btn__qure path,
+#blueberry .btn__qure path,
+#blueberry-woman .btn__qure path { fill: #000000; }
+
 /* Inverted variant - pure white square with black QURE letters */
 .btn-inverted,
 .btn-inverted:hover,
@@ -254,12 +277,16 @@ p { margin: 0; }
 
 /* ---------- Navigation ---------- */
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 50;
   background: var(--bg);
   transition: backdrop-filter .25s var(--ease), background .25s var(--ease);
 }
+body { padding-top: 72px; }
 .nav__inner { padding-right: 90px; }
 .nav.scrolled {
   backdrop-filter: saturate(120%) blur(8px);
@@ -749,13 +776,9 @@ p { margin: 0; }
 }
 .plan:hover { transform: translateY(-4px); box-shadow: 0 30px 50px rgba(0,0,0,0.08); }
 .plan.featured {
-  background: #000;
-  color: #ffffff;
+  background: var(--white);
+  color: inherit;
 }
-.plan.featured .plan__label,
-.plan.featured .plan__per,
-.plan.featured .plan__list li { color: rgba(255,255,255,0.7); }
-.plan.featured .plan__list li::before { color: rgba(255,255,255,0.7); }
 .plan__badge {
   position: absolute;
   top: 20px;
@@ -765,10 +788,9 @@ p { margin: 0; }
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 6px 12px;
-  border-radius: var(--radius-pill);
-  background: var(--white);
-  color: var(--ink);
+  padding: 0;
+  background: transparent;
+  color: #e53935;
 }
 .plan__label {
   font-family: var(--font-display);
@@ -868,10 +890,10 @@ p { margin: 0; }
 }
 .pillar__num {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 300;
   font-size: 18px;
   letter-spacing: -0.02em;
-  color: var(--muted);
+  color: #000;
 }
 .pillar h3 {
   font-size: clamp(20px, 1.8vw, 26px);
@@ -1008,7 +1030,7 @@ p { margin: 0; }
   background: #000;
   color: #ffffff;
   padding: clamp(56px, 7vw, 100px) 0 32px;
-  margin-top: clamp(64px, 8vw, 120px);
+  margin-top: clamp(32px, 4vw, 60px);
   font-family: var(--font-display);
 }
 .footer * { font-family: var(--font-display) !important; }
@@ -1231,6 +1253,7 @@ p { margin: 0; }
   :root { --gutter: 24px; }
 
   .nav__inner { gap: 12px; height: 64px; padding-right: 90px; }
+  body { padding-top: 64px; }
   .nav__links { gap: clamp(14px, 1.6vw, 22px); font-size: 13px; }
 
   .benefits { grid-template-columns: repeat(4, 1fr); }
@@ -1275,6 +1298,9 @@ p { margin: 0; }
   .nav__links { display: none; }
   .nav__group { display: none; }
   .nav__burger { display: block; }
+  /* Always-visible nav on mobile — fixed instead of sticky (sticky breaks with overflow-x: hidden ancestors on iOS Safari) */
+  .nav { position: fixed; top: 0; left: 0; right: 0; width: 100%; }
+  body { padding-top: 64px; }
   .nav__inner { justify-content: space-between; padding-right: 0; }
   .nav__logo {
     position: static;
@@ -1357,8 +1383,8 @@ p { margin: 0; }
   section.section-tight .split .product-id { order: 1; }
   section.section-tight .split .split__img { order: 2; margin: 0 auto; }
   section.section-tight .split .product-cta-row { order: 3; justify-content: center; flex-wrap: wrap; }
-  section.section-tight .split p { order: 4; }
-  section.section-tight .split ul { order: 5; }
+  section.section-tight .split p { order: 4; margin-bottom: 0; }
+  section.section-tight .split ul { order: 5; margin-top: 4px !important; margin-bottom: 16px !important; }
 
   /* Buttons: slightly smaller on mobile + centered (square buttons only, not text) */
   .btn { width: 93px; height: 93px; font-size: 11px; letter-spacing: 0.04em; padding: 10px; gap: 4px; transition: none; }
@@ -1499,6 +1525,7 @@ p { margin: 0; }
   .nav__logo svg { height: 24px; width: auto; }
   .nav__inner { height: 56px; }
   .mobile-menu { top: 56px; }
+  body { padding-top: 56px; }
 
   /* Marquee tighter */
   .marquee__item { font-size: 9px; padding-right: 18px; gap: 18px; }
