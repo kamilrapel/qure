@@ -27,7 +27,7 @@
 
   --container: 1320px;
   --gutter: clamp(20px, 4vw, 56px);
-  --section-y: clamp(64px, 10vw, 140px);
+  --section-y: clamp(64px, 10vw, 50px);
 
   --radius-sm: 6px;
   --radius-md: 14px;
@@ -93,12 +93,7 @@ p { margin: 0; }
 }
 
 .eyebrow {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.101em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
+  display: none;
 }
 
 .lead {
@@ -122,8 +117,8 @@ p { margin: 0; }
   align-items: center;
   justify-content: center;
   gap: 5px;
-  width: 129px;
-  height: 129px;
+  width: 112px;
+  height: 112px;
   padding: 13px;
   border-radius: 0;
   font-family: var(--font-display);
@@ -228,14 +223,31 @@ p { margin: 0; }
   box-shadow: none !important;
   filter: none !important;
   opacity: 1 !important;
-  font-size: 11px;
+  font-size: 9.5px;
+  letter-spacing: 0.02em;
 }
 .btn-inverted * { background: transparent !important; }
 .btn-inverted .btn__qure path { fill: #000000 !important; }
 .btn-inverted .btn__text { color: #000000 !important; }
 .btn-inverted:hover .btn__text { filter: none !important; }
 
-.btn-sm { width: 97px; height: 97px; font-size: 11px; padding: 9px; }
+.btn-sm { width: 83px; height: 83px; font-size: 11px; padding: 9px; }
+
+/* Tight CTA button modifier - reduces typography so words like "subscription" fit on one line */
+.btn-cta-tight { font-size: 9.5px; letter-spacing: 0.02em; }
+@media (max-width: 720px) {
+  .btn-cta-tight { font-size: 8px !important; letter-spacing: 0 !important; padding: 8px !important; }
+  .btn-cta-tight,
+  .btn-cta-tight:hover,
+  .btn-cta-tight:active,
+  .btn-cta-tight:focus { transform: none !important; }
+  .btn-cta-tight:hover .btn__text,
+  .btn-cta-tight:active .btn__text,
+  .btn-cta-tight:focus .btn__text { opacity: 1 !important; transform: none !important; filter: none !important; }
+}
+@media (max-width: 480px) {
+  .btn-cta-tight { font-size: 7.5px !important; letter-spacing: 0 !important; padding: 6px !important; }
+}
 
 /* ---------- Navigation ---------- */
 .nav {
@@ -245,6 +257,7 @@ p { margin: 0; }
   background: var(--bg);
   transition: backdrop-filter .25s var(--ease), background .25s var(--ease);
 }
+.nav__inner { padding-right: 90px; }
 .nav.scrolled {
   backdrop-filter: saturate(120%) blur(8px);
   background: rgba(229,229,229,0.9);
@@ -268,7 +281,7 @@ p { margin: 0; }
 }
 .nav__logo:hover { opacity: 1; }
 .nav__logo svg {
-  height: clamp(22px, 2.2vw, 30px);
+  height: clamp(25px, 2.53vw, 35px);
   width: auto;
   fill: #000;
   pointer-events: none;
@@ -291,7 +304,7 @@ p { margin: 0; }
 .nav__links a {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.101em;
   text-transform: uppercase;
   color: #000;
@@ -321,6 +334,10 @@ p { margin: 0; }
   display: flex;
   align-items: center;
   gap: 18px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .lang-switch {
   display: inline-flex;
@@ -370,7 +387,7 @@ p { margin: 0; }
 /* ---------- Hero ---------- */
 .hero {
   padding-top: clamp(40px, 6vw, 80px);
-  padding-bottom: clamp(40px, 6vw, 80px);
+  padding-bottom: clamp(20px, 3vw, 40px);
   overflow: hidden;
 }
 .hero__grid {
@@ -516,7 +533,7 @@ p { margin: 0; }
 /* ---------- Flavors grid ---------- */
 .flavors {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(12px, 1.4vw, 20px);
 }
 .flavor-card {
@@ -546,6 +563,7 @@ p { margin: 0; }
   align-self: center;
   width: 100%;
   margin: 0 auto;
+  order: 2;
 }
 .flavor-card__bottle img {
   height: 127%;
@@ -561,7 +579,12 @@ p { margin: 0; }
   object-fit: contain;
   object-position: center;
   display: block;
-  margin-top: -75px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  order: 1;
+  transform: translateY(200%);
+  position: relative;
+  z-index: 2;
 }
 .flavor-card__dot {
   width: 10px;
@@ -577,7 +600,9 @@ p { margin: 0; }
   align-self: center;
   margin-top: 18px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  order: 3;
+  transform: translateY(-110%);
 }
 .flavor-card__cta {
   margin-top: 4px;
@@ -585,6 +610,7 @@ p { margin: 0; }
   align-items: center;
   justify-content: center;
   gap: 10px;
+  order: 4;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 13px;
@@ -607,6 +633,9 @@ p { margin: 0; }
 .flavor-card.t-mango,
 .flavor-card.t-blueberry,
 .flavor-card.t-blueberry-woman { border-color: #000; }
+
+/* Hide the 5th flavor card (Blueberry for Woman) on the landing page everywhere */
+.flavors > .flavor-card:nth-child(5) { display: none; }
 
 .flavor-card[class*="t-"]:hover {
   background: transparent;
@@ -646,8 +675,8 @@ p { margin: 0; }
   margin-bottom: 24px;
 }
 .product-id__name {
-  height: clamp(62px, 5.5vw, 79px);
-  width: auto;
+  width: clamp(282px, 25vw, 361px);
+  height: auto;
   max-width: 100%;
   object-fit: contain;
   object-position: left center;
@@ -661,8 +690,8 @@ p { margin: 0; }
   flex-wrap: wrap;
 }
 .product-cta-row__protein {
-  width: 129px;
-  height: 129px;
+  width: 112px;
+  height: 112px;
   display: block;
   flex-shrink: 0;
 }
@@ -985,7 +1014,7 @@ p { margin: 0; }
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 40px;
-  padding-bottom: 60px;
+  padding-bottom: clamp(12px, 1.8vw, 24px);
   border-bottom: 1px solid #2a2a2a;
 }
 .footer__logo-wide {
@@ -1072,16 +1101,12 @@ p { margin: 0; }
   border-radius: var(--radius-lg);
   padding: clamp(40px, 5vw, 88px);
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns: 1fr;
   gap: 48px;
   align-items: center;
 }
 .variety-pack__bottles {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 0;
-  position: relative;
+  display: none;
 }
 .variety-pack__bottles img {
   width: 22%;
@@ -1203,7 +1228,7 @@ p { margin: 0; }
 @media (max-width: 1024px) {
   :root { --gutter: 24px; }
 
-  .nav__inner { gap: 12px; height: 64px; }
+  .nav__inner { gap: 12px; height: 64px; padding-right: 90px; }
   .nav__links { gap: clamp(14px, 1.6vw, 22px); font-size: 13px; }
 
   .benefits { grid-template-columns: repeat(4, 1fr); }
@@ -1235,7 +1260,8 @@ p { margin: 0; }
 
   .variety-pack { grid-template-columns: 1fr; gap: 32px; padding: clamp(28px, 4vw, 56px); }
 
-  .footer__top { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer__top { grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .footer__brand { grid-column: 1 / -1; }
   .footer__logo-wide { margin-bottom: clamp(40px, 6vw, 80px); }
 }
 
@@ -1247,7 +1273,7 @@ p { margin: 0; }
   .nav__links { display: none; }
   .nav__group { display: none; }
   .nav__burger { display: block; }
-  .nav__inner { justify-content: space-between; }
+  .nav__inner { justify-content: space-between; padding-right: 0; }
   .nav__logo {
     position: static;
     left: auto;
@@ -1265,6 +1291,8 @@ p { margin: 0; }
     order: 2;
   }
   .nav__right {
+    position: static;
+    transform: none;
     margin-left: auto;
     gap: 8px;
     order: 3;
@@ -1283,12 +1311,20 @@ p { margin: 0; }
   /* Benefits grid: 2 cols on mobile */
   .benefits { grid-template-columns: repeat(2, 1fr); }
   .benefit { padding: clamp(20px, 5vw, 32px) 0; }
-  .benefit__icon { width: clamp(88px, 28vw, 140px); height: clamp(88px, 28vw, 140px); }
+  .benefit__icon { width: clamp(97px, 30.8vw, 154px); height: clamp(97px, 30.8vw, 154px); }
 
-  /* Flavor cards: single column */
-  .flavors { grid-template-columns: 1fr; gap: 20px; }
-  .flavor-card { padding: 24px 16px; }
+  /* Flavor cards: 2 columns × 2 rows (4 cards), hide 5th card */
+  .flavors { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .flavor-card { padding: 16px 8px; }
   .flavor-card:hover { transform: none; }
+  .flavors > .flavor-card:nth-child(5) { display: none; }
+  /* Move "See all products" button below the flavor cards on mobile */
+  .section .container:has(> .flavors) { display: flex; flex-direction: column; }
+  .section .container:has(> .flavors) > .sec-head { display: contents; }
+  .section .container:has(> .flavors) > .sec-head > .sec-head__row { display: contents; }
+  .section .container:has(> .flavors) > .sec-head > .sec-head__row > div { order: 1; }
+  .section .container:has(> .flavors) > .flavors { order: 2; }
+  .section .container:has(> .flavors) > .sec-head > .sec-head__row > a.btn { order: 3; margin-top: 24px; }
   /* Mobile: flavor name (SVG title) sits directly under the bottle, no overlap */
   .flavor-card__bottle {
     aspect-ratio: auto;
@@ -1298,12 +1334,12 @@ p { margin: 0; }
   .flavor-card__bottle img {
     height: auto;
     width: auto;
-    max-height: 300px;
-    max-width: 70%;
+    max-height: 397px;
+    max-width: 93%;
     display: block;
   }
-  .flavor-card__name { margin-top: 4px; max-height: 56px; }
-  .flavor-card__protein { margin-top: 14px; }
+  .flavor-card__name { margin-top: 0; margin-bottom: 8px; max-height: 50px; transform: translateY(50%) scale(0.9); }
+  .flavor-card__protein { margin-top: 14px; width: clamp(62px, 6.6vw, 88px); transform: translateY(-40%); }
 
   /* Mobile: hide bottle image in The QURE promise split section */
   .split__img--promise { display: none; }
@@ -1322,8 +1358,16 @@ p { margin: 0; }
   section.section-tight .split ul { order: 5; }
 
   /* Buttons: slightly smaller on mobile + centered (square buttons only, not text) */
-  .btn { width: 112px; height: 112px; font-size: 12px; padding: 10px; gap: 4px; transition: none; }
-  .btn-sm { width: 84px; height: 84px; font-size: 10px; }
+  .btn { width: 93px; height: 93px; font-size: 11px; letter-spacing: 0.04em; padding: 10px; gap: 4px; transition: none; }
+  .btn-sm { width: 70px; height: 70px; font-size: 9px; letter-spacing: 0.03em; }
+  .btn-inverted { font-size: 8px; letter-spacing: 0; padding: 8px; }
+  .btn-inverted,
+  .btn-inverted:hover,
+  .btn-inverted:active,
+  .btn-inverted:focus { transform: none !important; }
+  .btn-inverted:hover .btn__text,
+  .btn-inverted:active .btn__text,
+  .btn-inverted:focus .btn__text { opacity: 1 !important; transform: none !important; filter: none !important; }
   /* Disable hover effects on mobile (no hover anyway) */
   .btn__qure { display: none; }
   .btn:hover .btn__text,
@@ -1340,13 +1384,13 @@ p { margin: 0; }
   .product-cta-row { justify-content: center; }
 
   /* Product page */
-  .split__img { padding: 16px; min-height: 280px; }
-  .split__img img { max-height: 360px; }
-  .product-id__name { height: clamp(48px, 9vw, 68px); }
+  .split__img { padding: 16px; min-height: 322px; }
+  .split__img img { max-height: 414px; }
+  .product-id__name { width: clamp(241px, 45.1vw, 340px); height: auto; transform: translateY(70%); }
 
   /* Product CTA row */
   .product-cta-row { justify-content: flex-start; }
-  .product-cta-row__protein { width: 100px; height: 100px; }
+  .product-cta-row__protein { width: 93px; height: 93px; }
 
   /* Plans */
   .plan { padding: 24px; }
@@ -1357,13 +1401,20 @@ p { margin: 0; }
   .pillars { gap: 32px; }
 
   /* Variety pack */
-  .variety-pack__bottles img { width: 30%; }
+  .variety-pack__bottles { display: none; }
+
+  /* Hero bottle on mobile +15% */
+  .hero__bottle img {
+    width: clamp(253px, 57.5vw, 414px);
+    animation: none;
+    transform: none;
+  }
 
   /* Brand mark scroll section: much smaller on mobile */
   .brand-mark-section {
     min-height: 0;
     padding: 0;
-    margin: -24px 0;
+    margin: -400px 0;
     display: block;
   }
   .brand-mark-track {
@@ -1374,7 +1425,7 @@ p { margin: 0; }
 
   /* Footer */
   .footer { padding-top: clamp(48px, 10vw, 72px); }
-  .footer__top { grid-template-columns: 1fr; gap: 28px; padding-bottom: 36px; }
+  .footer__top { grid-template-columns: 1fr 1fr 1fr; gap: 16px; padding-bottom: 10px; }
   .footer__bottom { flex-direction: column; align-items: center; gap: 12px; }
   .footer__bottom ul { gap: 18px; flex-wrap: wrap; justify-content: center; }
   .footer__logo-wide { margin-bottom: 32px; }
@@ -1401,21 +1452,22 @@ p { margin: 0; }
   h2 { font-size: clamp(28px, 9vw, 40px) !important; }
 
   /* Benefits: keep 2 cols but smaller */
-  .benefit__icon { width: clamp(72px, 30vw, 120px); height: clamp(72px, 30vw, 120px); }
+  .benefit__icon { width: clamp(79px, 33vw, 132px); height: clamp(79px, 33vw, 132px); }
 
   /* Buttons */
-  .btn { width: 100px; height: 100px; font-size: 11px; }
+  .btn { width: 82px; height: 82px; font-size: 10px; letter-spacing: 0.03em; }
+  .btn-inverted { font-size: 7.5px; letter-spacing: 0; padding: 6px; }
+  .product-cta-row__protein { width: 82px; height: 82px; }
 
   /* Logo in nav */
-  .nav__logo svg { height: 22px; width: auto; }
+  .nav__logo svg { height: 24px; width: auto; }
   .nav__inner { height: 56px; }
   .mobile-menu { top: 56px; }
 
   /* Marquee tighter */
   .marquee__item { font-size: 9px; padding-right: 18px; gap: 18px; }
 
-  /* Variety pack bottles */
-  .variety-pack__bottles img { width: 32%; }
+  /* Variety pack bottles hidden on mobile */
 
   /* Brand mark even smaller */
   .brand-mark { width: clamp(130px, 60vw, 200px); }
@@ -1428,6 +1480,7 @@ p { margin: 0; }
   width: 100%;
   min-height: 130vh;
   padding: clamp(60px, 8vw, 140px) 0;
+  margin: -300px 0;
   overflow: hidden;
   position: relative;
   display: flex;
