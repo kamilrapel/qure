@@ -193,7 +193,6 @@
         <ul>
           <li><a href="https://instagram.com/qureprotein" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="#">TikTok</a></li>
-          <li><a href="#">YouTube</a></li>
           <li><a href="#">Facebook</a></li>
         </ul>
       </div>
@@ -201,9 +200,9 @@
     <div class="footer__bottom">
       <span>© 2026 QURE PROTEIN. All rights reserved.</span>
       <ul>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Cookies</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
       </ul>
     </div>
   </div>
@@ -260,5 +259,62 @@
   })();
 
   </script>
+<!-- Cookie consent banner (GDPR + ePrivacy) -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <h3>We use cookies</h3>
+  <p>We use strictly necessary cookies to make our site work. With your consent, we also use analytics and marketing cookies to improve your experience. See our <a href="cookies.html">Cookies Policy</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-banner__customize" id="cookieCustomize">
+    <div class="cookie-banner__category">
+      <div><strong>Strictly necessary</strong><small>Required for the site to work.</small></div>
+      <div class="cookie-banner__toggle locked" aria-label="Always active"></div>
+    </div>
+    <div class="cookie-banner__category">
+      <div><strong>Functional</strong><small>Remember your preferences.</small></div>
+      <div class="cookie-banner__toggle" data-cat="functional" aria-label="Toggle functional cookies"></div>
+    </div>
+    <div class="cookie-banner__category">
+      <div><strong>Analytics</strong><small>Help us improve the site.</small></div>
+      <div class="cookie-banner__toggle" data-cat="analytics" aria-label="Toggle analytics cookies"></div>
+    </div>
+    <div class="cookie-banner__category">
+      <div><strong>Marketing</strong><small>Personalised ads.</small></div>
+      <div class="cookie-banner__toggle" data-cat="marketing" aria-label="Toggle marketing cookies"></div>
+    </div>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="cookie-banner__btn cookie-banner__btn--secondary" id="cookieReject">Reject all</button>
+    <button class="cookie-banner__btn cookie-banner__btn--secondary" id="cookieCustomizeBtn">Customize</button>
+    <button class="cookie-banner__btn cookie-banner__btn--primary" id="cookieAccept">Accept all</button>
+  </div>
+</div>
+<script>
+(function() {
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  const STORAGE_KEY = 'qure_consent';
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch(e) {}
+  if (!saved) setTimeout(() => banner.classList.add('show'), 600);
+  const save = (state) => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...state, ts: Date.now() })); } catch(e) {}
+    banner.classList.remove('show');
+  };
+  document.getElementById('cookieAccept').addEventListener('click', () => save({ functional: true, analytics: true, marketing: true }));
+  document.getElementById('cookieReject').addEventListener('click', () => save({ functional: false, analytics: false, marketing: false }));
+  document.getElementById('cookieCustomizeBtn').addEventListener('click', (e) => {
+    const isExpanded = banner.classList.toggle('expanded');
+    if (isExpanded) {
+      e.target.textContent = 'Save preferences';
+    } else {
+      const state = {};
+      banner.querySelectorAll('.cookie-banner__toggle:not(.locked)').forEach(t => { state[t.dataset.cat] = t.classList.contains('on'); });
+      save(state);
+    }
+  });
+  banner.querySelectorAll('.cookie-banner__toggle:not(.locked)').forEach(t => {
+    t.addEventListener('click', () => t.classList.toggle('on'));
+  });
+})();
+</script>
 </body>
 </html>
