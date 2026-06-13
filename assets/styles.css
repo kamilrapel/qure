@@ -1477,8 +1477,10 @@ body { padding-top: 72px; }
   .product-cta-row { flex-wrap: wrap; gap: 12px; }
 
   .research-grid { grid-template-columns: 1fr; }
-  /* Contact: keep 2-column (info left, form right) on mobile */
-  .contact-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  /* Contact: stack on mobile — text/info on top, form below */
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  /* Smaller gap between intro paragraph and General block on mobile */
+  .contact-info > p { margin-bottom: 12px !important; }
 
   .variety-pack { grid-template-columns: 1fr; gap: 32px; padding: clamp(28px, 4vw, 56px); }
 
